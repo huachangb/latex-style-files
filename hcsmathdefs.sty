@@ -1,0 +1,32 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{hcsmathdefs}
+
+\RequirePackage{amsfonts}
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{amsthm}
+\RequirePackage{mathtools}
+
+
+% begin mathematics commands
+\newtheorem{theorem}{Theorem}[section] 
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\renewcommand\vec{\boldsymbol}
+\newcommand{\mat}[1]{\mathbf{#1}}
+
+\newcommand{\bd}[1]{\partial #1}
+\newcommand{\interior}[1]{#1 ^\circ}
+
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+\DeclarePairedDelimiter{\abs}{|}{|}
+\DeclarePairedDelimiter{\DP}{\langle}{\rangle}
+
+\DeclareMathOperator*{\diag}{diag}
+\DeclareMathOperator*{\trace}{Tr}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\sign}{sign}
+% end mathematics commands
