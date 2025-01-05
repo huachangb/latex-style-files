@@ -1,32 +1,51 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{hcsmathdefs}
+\ProvidesPackage{SHC}
 
 \RequirePackage{amsfonts}
 \RequirePackage{amsmath}
 \RequirePackage{amssymb}
 \RequirePackage{amsthm}
 \RequirePackage{mathtools}
+\usepackage{tikz-cd}
 
+\RequirePackage[capitalize]{cleveref} 
+\RequirePackage{xcolor}
+
+% fix CREFs
+\Crefname{figure}{Figure}{Figures}
+
+% Notes
+\newcommand{\personalnote}[3]{\color{#1} \textbf{\(\blacktriangleright\) #2:} #3 \textbf{\(\blacktriangleleft\)} \color{black}}
+\newcommand{\hc}[1]{\personalnote{red}{HC}{#1}}
 
 % begin mathematics commands
 \newtheorem{theorem}{Theorem}[section] 
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
 
 \renewcommand\vec{\boldsymbol}
 \newcommand{\mat}[1]{\mathbf{#1}}
 
 \newcommand{\bd}[1]{\partial #1}
-\newcommand{\interior}[1]{#1 ^\circ}
+% \newcommand{\interior}[1]{#1 ^\circ}
+\newcommand{\interior}[1]{\operatorname{Int} #1}
+
+\newcommand{\T}[0]{\top}
 
 \DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
 \DeclarePairedDelimiter{\abs}{|}{|}
-\DeclarePairedDelimiter{\DP}{\langle}{\rangle}
+\DeclarePairedDelimiter{\dotp}{\langle}{\rangle}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
 
 \DeclareMathOperator*{\diag}{diag}
 \DeclareMathOperator*{\trace}{Tr}
 \DeclareMathOperator*{\argmax}{arg\,max}
 \DeclareMathOperator*{\argmin}{arg\,min}
 \DeclareMathOperator*{\sign}{sign}
+\DeclareMathOperator*{\homset}{Hom}
+
 % end mathematics commands
