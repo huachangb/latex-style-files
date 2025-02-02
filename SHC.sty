@@ -1,3 +1,7 @@
+% Written by Hua Chang Bakker, 2025.
+%
+% Feel free to use this stye file.
+
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{SHC}
 
@@ -6,7 +10,7 @@
 \RequirePackage{amssymb}
 \RequirePackage{amsthm}
 \RequirePackage{mathtools}
-\RequirePackage{tikz-cd}
+\usepackage{tikz-cd}
 
 \RequirePackage[capitalize]{cleveref} 
 \RequirePackage{xcolor}
@@ -32,6 +36,13 @@
 \newcommand{\bd}[1]{\partial #1}
 % \newcommand{\interior}[1]{#1 ^\circ}
 \newcommand{\interior}[1]{\operatorname{Int} #1}
+\newcommand{\supp}[1]{\operatorname{supp} #1}
+
+% diff geo
+\newcommand{\grp}[1]{\operatorname{#1}}
+\newcommand{\lie}[1]{\operatorname{Lie}(#1)}
+
+
 
 \newcommand{\T}[0]{\top}
 
@@ -47,5 +58,6 @@
 \DeclareMathOperator*{\argmin}{arg\,min}
 \DeclareMathOperator*{\sign}{sign}
 \DeclareMathOperator*{\homset}{Hom}
+\DeclareMathOperator*{\rank}{rank}
 
 % end mathematics commands
